@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const Register = () => {
    const { createUser } = useContext(AuthContext);
+   const [registerError, setRegisterError] = useState('');
 
    const handleRegister = e => {
       e.preventDefault();
@@ -17,6 +18,18 @@ const Register = () => {
       const password = form.password.value;
       const newUser = { name, photo, address, email, password }
       console.log(newUser)
+      // reset
+      setRegisterError('')
+      if (password.length < 6) {
+         return setRegisterError('Password should be at least 6 character');
+      }
+      else if(!/^(?=.*[A-Z])/.test(password)){
+         return setRegisterError('Password should be at least 1 Capital Letter');
+      }
+      else if(!/(?=.*[@$!%*#?&])/.test(password)){
+         return setRegisterError('Password should be at least 1 special character(@$!%*#?&)');
+      }
+
       createUser(email, password)
          .then(result => {
             console.log(result.user)
@@ -32,8 +45,7 @@ const Register = () => {
                .then(res => res.json())
                .then(data => {
                   console.log(data);
-                  form.reset();
-                  if (data.insertedId > 0) {
+                  if (data.insertedId) {
                      Swal.fire({
                         position: 'center',
                         icon: 'success',
@@ -41,11 +53,13 @@ const Register = () => {
                         showConfirmButton: false,
                         timer: 1500
                      })
+                     form.reset();
                   }
                })
          })
-         .then(error => {
+         .catch(error => {
             console.error(error);
+            setRegisterError(error.message);
          })
    }
    return (
@@ -108,6 +122,9 @@ const Register = () => {
                   </Link>
                </p>
             </form>
+            {
+               registerError && <p className="text-center text-red-600">{registerError}</p>
+            }
          </div>
       </div>
    );
