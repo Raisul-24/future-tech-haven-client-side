@@ -14,6 +14,10 @@ import Login from './Pages/Login';
 import Register from './Components/Register';
 import ErrorPage from './Pages/ErrorPage';
 import AuthProvider from './Provider/AuthProvider';
+import Products from './Components/SingleProduct/Products';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import UpdateProduct from './Components/SingleProduct/UpdateProduct';
+import DetailSProduct from './Components/SingleProduct/DetailSProduct';
 
 const router = createBrowserRouter([
   {
@@ -24,11 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:<Home></Home>,
-        loader: () => fetch('http://localhost:50001/products'),
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
         path: "/myCart",
@@ -41,6 +44,21 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/brands/:brand_name",
+        element: <Products></Products>,
+        loader: () => fetch(`http://localhost:50001/products`),
+      },
+      {
+        path: "/updateProduct/:id",
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        loader : ({params}) => fetch(`http://localhost:50001/products/${params.id}`)
+      },
+      {
+        path: "/detailsProduct/:id",
+        element: <DetailSProduct></DetailSProduct>,
+        loader : ({params}) => fetch(`http://localhost:50001/products/${params.id}`)
       }
     ]
   },
