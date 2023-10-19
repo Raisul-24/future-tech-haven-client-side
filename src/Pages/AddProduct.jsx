@@ -1,4 +1,3 @@
-import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -43,10 +42,6 @@ const AddProduct = () => {
    return (
       <div className="bg-[url('/images/more/11.png')] ">
          <div className="container mx-auto">
-            <button className="flex btn  items-center mb-10 bg-transparent border-0 font-rancho text-lg font-bold text-[#374151]">
-               <BiArrowBack></BiArrowBack>
-               <Link to="/">Back to Home</Link>
-            </button>
             <div className="bg-[#F4F3F0] md:pt-20 rounded-xl py-8 my-10 md:mb-20">
                <h2 className="text-3xl font-extrabold text-center font-rancho text-[#374151]">Add New Product</h2>
                <p className="text-center my-5 mb-8">

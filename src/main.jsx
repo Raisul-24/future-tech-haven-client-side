@@ -65,7 +65,7 @@ const router = createBrowserRouter([
       {
         path: "/brand",
         element: <NewBrand></NewBrand>,
-      }
+      },
     ]
   },
 ]);

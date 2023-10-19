@@ -39,7 +39,7 @@ const SingleAddToCart = ({ cart }) => {
          <div className="card card-side bg-white shadow-xl md:p-4 w-3/4">
             <div className="grid grid-cols-1 md:grid-cols-3">
             <div className=''>
-               <figure><img src={photo} alt="" className='h-36 md:h-60' /></figure>
+                  <img src={photo} alt="" className='h-36 md:h-60' />
             </div>
             <div className="card-body col-span-2">
                <h2 className="card-title">Name: {name}</h2>

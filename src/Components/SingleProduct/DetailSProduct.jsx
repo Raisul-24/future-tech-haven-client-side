@@ -38,11 +38,11 @@ const DetailSProduct = () => {
       <div className="container mx-auto">
          <div className="text-center text-black">
             <h2 className="text-6xl font-extrabold my-5">{name}</h2>
-            <h3 className="text-4xl font-extrabold btn btn-accent">Price : {price}</h3>
+            <h3 className="text-4xl font-extrabold btn btn-accent mb-5">Price : {price}</h3>
          </div>
          <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             <div className="flex justify-center">
-               <img src={photo} alt="" className="w-[40vw] h-[80vh]" />
+               <img src={photo} alt="" className="w-[40vw] h-[80vh] rounded-xl" />
             </div>
             <div className="text-black ">
                <h2 className="text-2xl font-bold">Name: {name}</h2>
