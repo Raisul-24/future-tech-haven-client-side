@@ -1,26 +1,32 @@
 [
    {
       "id": 1,
-      "brand_name": "Apple"
+      "brand_name": "Apple",
+      "img" : "https://i.ibb.co/QMVvGV9/knowledge-graph-logo.png"
    },
    {
       "id": 2,
-      "brand_name": "Samsung"
+      "brand_name": "Samsung",
+      "img" : "https://i.ibb.co/4SPkfn2/256-144-3.png"
    },
    {
       "id": 3,
-      "brand_name": "Google"
+      "brand_name": "Google",
+      "img" : "https://i.ibb.co/DQyJr6L/googles-new-logo-5078286822539264-3-hp2x.gif"
    },
    {
       "id": 4,
-      "brand_name": "Sony"
+      "brand_name": "Sony",
+      "img" : "https://i.ibb.co/VpFbRjm/sony-logo-blue-RGB.png"
    },
    {
       "id": 5,
-      "brand_name": "Motorola"
+      "brand_name": "Motorola",
+      "img" : "https://i.ibb.co/KLqq7j5/2048px-Motorola-M-symbol-blue-svg.png"
    },
    {
       "id": 6,
-      "brand_name": "Intel"
+      "brand_name": "Intel",
+      "img" : "https://i.ibb.co/vDBYTYp/intel-600.png"
    }
 ]

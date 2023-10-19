@@ -27,17 +27,17 @@ const Navbar = () => {
       <li className="block p-1 text-sm md:text-lg font-medium"><NavLink to="/addProduct">Add Products</NavLink></li>
       <li className="block p-1 text-sm md:text-lg font-medium"><NavLink to="/myCart">My Cart</NavLink></li>
       <li className="block p-1 text-sm md:text-lg font-medium">
-                     {
-                        user ?
-                           <button onClick={handleLogOut}>
-                              <NavLink to="">Log Out</NavLink>
-                           </button>
-                           :
-                           <button>
-                              <NavLink to="/login">Log In</NavLink>
-                           </button>
-                     }
-                  </li>
+         {
+            user ?
+               <button onClick={handleLogOut}>
+                  <NavLink to="">Log Out</NavLink>
+               </button>
+               :
+               <button>
+                  <NavLink to="/login">Log In</NavLink>
+               </button>
+         }
+      </li>
    </>
    return (
       <div>
@@ -51,13 +51,16 @@ const Navbar = () => {
                      {links}
                   </ul>
                </div>
+               <div className="flex items-center">
+                  <img src="/logo.jpeg" alt="" className="w-8 h-8"/>
                <Link to="/" className="normal-case text-xl md:text-3xl font-bold ">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">FutureTech</span>Haven</Link>
+               </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                <ul className="menu menu-horizontal px-1">
                   {links}
-                 
+
                </ul>
             </div>
             <div className="navbar-end ">
@@ -68,13 +71,13 @@ const Navbar = () => {
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                            <div className="w-10 rounded-full">
                               <img src={user.photoURL} />
-                              
+
                            </div>
                         </label>
                         <div className="hidden md:flex md:flex-col">
-                        <p className="text-xs font-medium mr-1">{user.displayName}</p>
-                        <p className="text-xs font-medium mr-1">{user.email}</p>
-                        
+                           <p className="text-xs font-medium mr-1">{user.displayName}</p>
+                           <p className="text-xs font-medium mr-1">{user.email}</p>
+
                         </div>
                      </div>
                   }

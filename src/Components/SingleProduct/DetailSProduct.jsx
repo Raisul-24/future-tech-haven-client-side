@@ -3,13 +3,14 @@ import Swal from "sweetalert2";
 
 const DetailSProduct = () => {
    const product = useLoaderData();
-   console.log(product)
+   
+   // console.log(product)
    const {  name,type, brand, price, short_description, rating, photo, details } = product;
 
    const handleAddToCart = e =>{
       e.preventDefault();
       const addedProduct = {name,brand,type,price,short_description,rating,photo,details}
-      console.log(addedProduct);
+      // console.log(addedProduct);
 // send data
       fetch('http://localhost:50001/addToCarts', {
          method: 'POST',
@@ -37,7 +38,7 @@ const DetailSProduct = () => {
       <div className="container mx-auto">
          <div className="text-center text-black">
             <h2 className="text-6xl font-extrabold my-5">{name}</h2>
-            <h3 className="text-4xl font-extrabold btn btn-outline btn-success">Price : {price}</h3>
+            <h3 className="text-4xl font-extrabold btn btn-accent">Price : {price}</h3>
          </div>
          <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             <div className="flex justify-center">
@@ -50,9 +51,11 @@ const DetailSProduct = () => {
                <h2 className="text-2xl font-extrabold">Price: {price}</h2>
                <p className="text-xl font-normal w-96 my-2">Short Description: <br />{short_description}</p>
                <h2 className="text-2xl font-semibold">Rating: {rating}</h2>
-               <button onClick={handleAddToCart}
-                className="btn btn-outline btn-success text-xl my-5 font-extrabold ">
-                  Add to Cart</button>
+               
+                  <button onClick={handleAddToCart}
+                  className="btn btn-outline btn-success text-xl my-5 font-extrabold ">
+                    Add to Cart</button>
+               
             </div>
          </div>
          <div className="my-10">
