@@ -13,7 +13,7 @@ const Home = () => {
          .then(data => setBrands(data))
    }, []);
 
-   console.log(brands);
+   // console.log(brands);
 
 
 
