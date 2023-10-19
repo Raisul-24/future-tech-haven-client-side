@@ -12,7 +12,7 @@ const DetailSProduct = () => {
       const addedProduct = {name,brand,type,price,short_description,rating,photo,details}
       // console.log(addedProduct);
 // send data
-      fetch('http://localhost:50001/addToCarts', {
+      fetch('https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/addToCarts', {
          method: 'POST',
          headers: {
             'Content-type': 'application/json'

@@ -10,7 +10,7 @@ const NewBrand = () => {
       const newBrand = {brand_name,img}
       console.log(newBrand);
       // send data to server
-      fetch('http://localhost:50001/brands',{
+      fetch('https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/brands',{
          method: 'POST',
          headers: {
             'Content-type' : "application/json"

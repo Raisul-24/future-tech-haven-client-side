@@ -8,7 +8,7 @@ import Banner from "../Components/Banner";
 const Home = () => {
    const [brands, setBrands] = useState([])
    useEffect(() => {
-      fetch('http://localhost:50001/brands')
+      fetch('https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/brands')
          .then(res => res.json())
          .then(data => setBrands(data))
    }, []);
@@ -22,7 +22,7 @@ const Home = () => {
       <div>
          <div className="container mx-auto">
             <div className="flex items-center text-xl font-semibold mt-6">
-               <h2 className="bg-red-600 text-white px-10 py-2 mr-10 rounded-xl">News:</h2>
+               <h2 className="bg-red-600 text-white px-10 py-2 mr-10 rounded-xl">Latest</h2>
                <Marquee>
                   Up to 75% sell now with conditional free delivery. Hurry up to buy more......
                </Marquee>
