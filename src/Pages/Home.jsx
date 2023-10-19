@@ -8,7 +8,7 @@ import Banner from "../Components/Banner";
 const Home = () => {
    const [brands, setBrands] = useState([])
    useEffect(() => {
-      fetch('brands.json')
+      fetch('http://localhost:50001/brands')
          .then(res => res.json())
          .then(data => setBrands(data))
    }, []);
@@ -33,7 +33,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col justify-center gap-9 my-10 ">
                {
-                  brands.map(brand => <Link to={`/brands/${brand.brand_name}`} key={brand.id}
+                  brands.map(brand => <Link to={`/brands/${brand.brand_name}`} key={brand._id}
                      className="border-2 py-2 rounded-3xl bg-red-50 ">
                      <div className="flex justify-center items-center">
                         <img src={brand.img} alt="" className=" w-14 rounded-full mr-5 h-14" />

@@ -5,10 +5,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const SingleProduct = ({ product }) => {
    const  {user} = useContext(AuthContext);
-   console.log(user)
+   console.log(product);
    const {_id, name, brand, type, price, short_description, rating, photo } = product;
    // console.log(_id)
-
    const handleUpdate = e =>{
       e.preventDefault();
    }

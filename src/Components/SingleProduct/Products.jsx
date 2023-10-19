@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import SingleProduct from "./SingleProduct";
+import Swal from "sweetalert2";
 
 
 const Products = () => {
@@ -8,8 +9,18 @@ const Products = () => {
    const { brand_name } = useParams();
    // console.log(brand_name);
    const allSimilarProducts = products.filter(similarProduct => similarProduct.brand === brand_name);
-   console.log(allSimilarProducts)
-
+   // console.log(allSimilarProducts.length)
+   if(allSimilarProducts.length === 0){
+      Swal.fire({
+         title: 'No data found!! Please add product...',
+         showClass: {
+           popup: 'animate__animated animate__fadeInDown'
+         },
+         hideClass: {
+           popup: 'animate__animated animate__fadeOutUp'
+         }
+       })
+   }
 
    return (
       <div className="container mx-auto">

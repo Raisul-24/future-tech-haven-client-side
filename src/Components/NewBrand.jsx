@@ -10,7 +10,7 @@ const NewBrand = () => {
       const newBrand = {brand_name,img}
       console.log(newBrand);
       // send data to server
-      fetch('http://localhost:2000/brands',{
+      fetch('http://localhost:50001/brands',{
          method: 'POST',
          headers: {
             'Content-type' : "application/json"
