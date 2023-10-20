@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../Components/Banner";
 import Accordion from "../Components/Accordion";
+import ThemeToggleButton from "../Components/Theme/ThemeToggleButton";
+
 
 
 const Home = () => {
@@ -20,7 +22,13 @@ const Home = () => {
 
    return (
 
-      <div className="container mx-auto">
+      <div >
+         <div className="flex justify-end my-3">
+         <div className="border border-pink-500w-28 p-1 md:p-3 mr-4 rounded-xl text-sm font-extrabold text-lime-500">
+         <ThemeToggleButton></ThemeToggleButton>
+         </div>
+         </div>
+         <div className="container mx-auto">
          <div>
             <div className="flex items-center text-xl font-semibold mt-6">
                <h2 className="bg-red-600 text-white px-3 md:px-10 py-2 md:mr-10 rounded-xl">Latest</h2>
@@ -56,6 +64,7 @@ const Home = () => {
           </div>
          <Accordion></Accordion>
          
+      </div>
       </div>
    );
 };

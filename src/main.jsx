@@ -19,6 +19,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import UpdateProduct from './Components/SingleProduct/UpdateProduct';
 import DetailSProduct from './Components/SingleProduct/DetailSProduct';
 import NewBrand from './Components/NewBrand';
+import ThemeProvider from './Components/Theme/ThemeProvider';
 
 const router = createBrowserRouter([
   {
@@ -72,8 +73,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ThemeProvider>
     <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )
