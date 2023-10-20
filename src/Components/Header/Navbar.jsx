@@ -9,7 +9,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
    const { user, logOut } = useContext(AuthContext);
-   // console.log(user)
+   console.log(user)
    // console.log(user.photoURL)
    const handleLogOut = () => {
       logOut()
@@ -70,7 +70,7 @@ const Navbar = () => {
                      <div className="flex items-center">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                            <div className="w-10 rounded-full">
-                              <img src={user.photoURL} />
+                              <img src={user?.photoURL } />
 
                            </div>
                         </label>
