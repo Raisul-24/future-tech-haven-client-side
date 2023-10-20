@@ -35,7 +35,7 @@ const Register = () => {
             console.log(result.user)
             // user
             const user = { name, photo, address, email }
-            fetch('https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/user', {
+            fetch('https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/user', {
                method: 'POST',
                headers: {
                   'Content-type': 'application/json'

@@ -9,7 +9,7 @@ import Accordion from "../Components/Accordion";
 const Home = () => {
    const [brands, setBrands] = useState([])
    useEffect(() => {
-      fetch('https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/brands')
+      fetch('https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/brands')
          .then(res => res.json())
          .then(data => setBrands(data))
    }, []);

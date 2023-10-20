@@ -17,7 +17,7 @@ const SingleAddToCart = ({ cart }) => {
       }).then((result) => {
          if (result.isConfirmed) {
             
-            fetch(`https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/addToCarts/${_id}`,{
+            fetch(`https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/addToCarts/${_id}`,{
                method: 'DELETE'
             })
             .then(res => res.json())

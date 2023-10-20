@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader : () => fetch(`https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/addToCarts`),
+        loader : () => fetch(`https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/addToCarts`),
       },
       {
         path: "/login",
@@ -50,17 +50,17 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brand_name",
         element: <Products></Products>,
-        loader: () => fetch(`https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/products`),
+        loader: () => fetch(`https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/products`),
       },
       {
         path: "/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader : ({params}) => fetch(`https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/products/${params.id}`),
+        loader : ({params}) => fetch(`https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/products/${params.id}`),
       },
       {
         path: "/detailsProduct/:id",
         element: <PrivateRoute><DetailSProduct></DetailSProduct></PrivateRoute>,
-        loader : ({params}) => fetch(`https://future-tech-haven-server-side-ftmzd8f4h-raisuls-projects.vercel.app/products/${params.id}`),
+        loader : ({params}) => fetch(`https://future-tech-haven-server-side-5q29gaaev-raisuls-projects.vercel.app/products/${params.id}`),
       },
       {
         path: "/brand",
