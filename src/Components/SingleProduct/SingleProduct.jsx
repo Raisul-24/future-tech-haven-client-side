@@ -64,7 +64,7 @@ const SingleProduct = ({ product }) => {
                      {rating}
                   </p>
                </div>
-               <p className="block  text-base font-light leading-relaxed text-gray-700 antialiased h-36 lg:h-40">
+               <p className="block  text-base font-light leading-relaxed text-gray-700 antialiased h-48 lg:h-40">
                   Category: {type}. <br />
                   <span className="text-black font-medium">Brand: {brand}.</span> <br /> {short_description}
                </p>
@@ -72,7 +72,7 @@ const SingleProduct = ({ product }) => {
 
             </div>
             <div className="flex justify-center">
-            <div className="p-6">
+            <div className="p-2 md:p-6">
                <button onClick={handleDetails}
                   className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-10 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
@@ -84,7 +84,7 @@ const SingleProduct = ({ product }) => {
                     Details</NavLink>
                </button>
             </div>
-            <div className="p-6">
+            <div className="p-2 md:p-6">
                <button onClick={handleUpdate}
                   className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-10 text-center align-middle  text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"

@@ -141,13 +141,13 @@ const AddProduct = () => {
                   </div>
 
                </form>
-               <p className=" flex justify-center  text-sm font-light leading-normal text-inherit antialiased">
+               <p className=" flex justify-center  text-sm font-light leading-normal text-inherit antialiased my-2">
                   Do you want to add new brand?
                   <Link
                      to="/brand"
                      className="ml-1 block  text-sm font-bold leading-normal text-pink-500 antialiased"
                   >
-                     Register Brand
+                     Add Brand
                   </Link>
                </p>
             </div>

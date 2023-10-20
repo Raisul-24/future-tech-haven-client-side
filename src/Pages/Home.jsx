@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../Components/Banner";
+import Accordion from "../Components/Accordion";
 
 
 const Home = () => {
@@ -19,10 +20,10 @@ const Home = () => {
 
    return (
 
-      <div>
-         <div className="container mx-auto">
+      <div className="container mx-auto">
+         <div>
             <div className="flex items-center text-xl font-semibold mt-6">
-               <h2 className="bg-red-600 text-white px-10 py-2 mr-10 rounded-xl">Latest</h2>
+               <h2 className="bg-red-600 text-white px-3 md:px-10 py-2 md:mr-10 rounded-xl">Latest</h2>
                <Marquee>
                   Up to 75% sell now with conditional free delivery. Hurry up to buy more......
                </Marquee>
@@ -44,6 +45,17 @@ const Home = () => {
             </div>
 
          </div>
+         <div className="my-10 md:my-20 px-5 md:px-0">
+            <h2 className="text-2xl text-center font-bold">Hot Products</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 my-6">
+               <img src="https://i.ibb.co/z7HsbhY/iphone-13-pro-max-alpine-green-Price-in-Srilanka-Apple-Asia-5.jpg" className="w-60 md:w-72 h-72 rounded-xl" alt="" />
+               <img src="https://i.ibb.co/N2yzFWT/Galaxy-S23-Cream-3448.jpg" className="w-60 md:w-72 h-72 rounded-xl" alt="" />
+               <img src="https://i.ibb.co/FmtdYrn/Samsung-Galaxy-Book-Flex-2-01.jpg" className="w-60 md:w-72 h-72 rounded-xl" alt="" />
+               <img src="https://i.ibb.co/t2RMk9Q/Pixel-7-Pro-Obsidian-8439.jpg" className="w-60 md:w-72 h-72 rounded-xl" alt="" />
+            </div>
+          </div>
+         <Accordion></Accordion>
+         
       </div>
    );
 };
