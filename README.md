@@ -11,4 +11,4 @@
 4. MyCart : After clicking add to cart button direct store in database and take data from database and shows My cart using loader function from MongoDB database;
 5. Navigate: after logging user all information will go to database and if user name, photo have then shows in navbar with email.
 6. Responsive: This website is completely try to make responsive for different devices like (desktop,phone,laptop and tablet).
-7. Marquee : having top of homepage shows marquee slider  
+7. Marquee : having top of homepage shows marquee slider  # future-tech-haven-client-side
